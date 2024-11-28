@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Eligibility_check.css">
+    <title>Eligibility Check</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+          <h1><b>R</b>aktSeva</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="#"><b>Home</b></a>
+          </li>
+          <li>
+            <a href="#"><b>Profile</b></a>
+          </li>
+          <li>
+            <a href="#"><b>FAQ</b></a>
+          </li>
+          <li>
+            <a href="#"><b>Help</b></a>
+          </li>
+          <li>
+            <a href="#"><b>Contact Us</b></a>
+          </li>
+          <li>
+            <a href="#"><b>About Us</b></a>
+          </li>
+        </ul>
+      </div>
+
+    <form id="eligibility-form">
+        <h2>Blood Donation Eligibility Questionnaire</h2>
+        
+        <!-- Personal Details Section -->
+        <label for="age">What is your age?</label>
+        <input type="number" id="age" name="age" required>
+        
+        <label for="weight">What is your weight? (in kg)</label>
+        <input type="number" id="weight" name="weight" required>
+    
+        <label for="health">Do you feel in good health today?</label>
+        <select id="health" name="health">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        
+        <!-- Medical History Section -->
+        <label for="pregnant">Are you currently pregnant or breastfeeding?</label>
+        <select id="pregnant" name="pregnant">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+    
+        <label for="heart_condition">Do you have any heart conditions or a history of heart disease?</label>
+        <select id="heart_condition" name="heart_condition">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+        
+        <label for="blood_pressure">Do you have high or low blood pressure?</label>
+        <select id="blood_pressure" name="blood_pressure">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+    
+        <label for="medications">Are you taking any medications?</label>
+        <select id="medications" name="medications">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+        
+        <label for="tattoo">Have you had a tattoo or body piercing in the last 6 months?</label>
+        <select id="tattoo" name="tattoo">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+    
+        <button type="submit" >Check Eligibility</button>
+    </form>
+    
+    <div id="eligibility-result" style="display: none;">
+        <div id="result-box">
+            <h3 id="result-message"></h3>
+            <p id="result-details"></p>
+            <button onclick="window.location.reload();">Check Again</button>
+        </div>
+    </div>
+    
+    
+    <script src="/js/new.js"></script>
+    
+</body>
+</html>

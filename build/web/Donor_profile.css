@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+/* Navbar styles */
+.nav {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; 
+    justify-content: space-between; /* Space out logo and links */
+    padding: 15px 30px;
+    background-color: rgba(236, 222, 222, 0.7);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.nav .logo {
+    color: rgb(139, 0, 0);
+    font-size: 22px; /* Larger logo */
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.nav ul {
+    display: flex;
+    gap: 25px; /* Add gap between links */
+    list-style: none;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.nav ul li a {
+    color: #8B0000;
+    font-size: 19px;
+    text-decoration: none;
+    justify-items: center;
+    padding: 10px 18px;
+    margin-bottom: 0;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-shadow: 1px 1px 2px black, 1px 1px 2px rgba(255, 255, 255, 0.4);
+
+}
+
+.nav ul li a:hover {
+    background-color: rgba(139, 0, 0, 0.8); /* Add hover effect */
+    color: white;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    background: transparent;
+    position:fixed;
+}
+
+.aside {
+    width: 15rem;
+    position: fixed;
+    padding: 20px;
+    top: 5rem;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    color: #eff4fa;
+    display: block;
+    background-color: rgba(133, 30, 30, 0.9); /* Darker background for better contrast */
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    border-radius: 10px 0 0 10px; /* Rounded corners on the sidebar */
+}
+
+/* Profile Section */
+.aside .profile h2 {
+    font-size: 30px;
+    margin-top: 3rem;
+    color: #ffffff; /* White text for better contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 255, 255, 0.6); /* Stronger text shadow */
+    font-family: 'Arial', sans-serif; /* Use a more modern font */
+}
+
+/* Centering Profile */
+.aside .profile {
+    text-align: center;
+}
+
+/* Side Navigation Styling */
+.aside .side-nav {
+    margin-top: 50px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.aside .side-nav li {
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Styling for Links */
+.aside .side-nav li a {
+    font-size: 18px; /* Adjust font size for readability */
+    font-weight: 600;
+    display: block;
+    border-bottom: 2px solid transparent; /* Subtle border effect */
+    color: white;
+    padding: 10px 20px;
+    z-index: 2;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect */
+.aside .side-nav li a:hover {
+    background-color: #003366; /* Darker background on hover */
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+    border-radius: 8px;
+    color: #ffffff; /* Change text color to white */
+    border-bottom: 2px solid #ffffff; /* Highlight border on hover */
+}
+
+/* Active State for Navigation */
+.aside .side-nav li a:active {
+    background-color: #001f33; /* Darker shade for active state */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Add Transitions to the Profile Section */
+.aside .profile h2 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.aside .profile h2:hover {
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+}
+
+.profile-card{
+    display: block;
+    margin-left: 17rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    padding: 10px;
+}
+
+.profile-header{
+        font-size: 35px;
+        padding: 5px;
+        border-bottom: 2px solid #093168;
+         color: rgb(149, 5, 5);
+        margin: 20px;
+}
+
+.profile-details{
+    padding-top: 14px;
+    padding-left: 10px;
+    font-size: 20px;
+
+}
+
+.info-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 8px;
+}
+
+.info-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 10px grey;
+
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) inset ; */
+}
+
+.info-label {
+    font-weight: bolder;
+    color: #333;
+}
+
+.info-value {
+    color: #555;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .info-box {
+        grid-template-columns: 1fr; /* Stacks the info items on smaller screens */
+    }
+}
+
+/* Medical Info */
+.medical-history-info {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    padding-left: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.medical-history-info p {
+    margin: 15px 0;
+}
+
+.medical-history-info p strong {
+    color:black;
+    font-weight: bold;
+}
+
+/* Medical History Info */
+.medical-history-info span {
+    font-weight: normal;
+    color: #555;
+}
+
+/* Donation History Table */
+.donation-history{
+    padding-left: 13px;
+    padding-right: 20px;
+}
+.donation-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    border: 2px solid #a52a2a;
+}
+
+.donation-history-table th,
+.donation-history-table td {
+    padding: 10px;
+    text-align: center;
+    text-align: left;
+    border: 1px solid #a52a2a;
+}
+
+.donation-history-table th {
+    background-color: #a52a2a; /* Brown background for table headers */
+    color: #fff;
+    font-weight: bold;
+}
+
+.donation-history-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.donation-history-table tr:hover {
+    background-color: #f1f1f1; /* Light background on hover for better readability */
+}
+
+/* Appointments Table Styling */
+.appointments{
+    margin-left: 20px;
+    margin-right: 28px;
+}
+.appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border: 2px solid #a52a2a; /* Border around entire table */
+}
+
+.appointments-table th,
+.appointments-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #a52a2a; /* Border for each cell */
+}
+
+.appointments-table th {
+    background-color: #a52a2a; /* Header background color */
+    color: #fff; /* Header text color */
+    font-weight: bold;
+}
+
+.appointments-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row color */
+}
+
+.appointments-table tr:hover {
+    background-color: #f1f1f1; /* Row highlight on hover */
+}
+
+/* Contact Information Section */
+.contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    color: #8B0000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Styling for each contact card */
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+.contact-card {
+    background-color: #fff;
+    border: 1px solid #a52a2a;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+/* Icon styling */
+.contact-card .icon {
+    font-size: 24px;
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+/* Card hover effect */
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Card headings */
+.contact-card h3 {
+    color: #8B0000;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-card p {
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+}

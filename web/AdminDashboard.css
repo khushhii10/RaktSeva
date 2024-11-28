@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#fff;
+    color: #333;
+}
+.sidebar {
+    width: 230px;
+    background-color: black;
+    opacity:0.8;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 90px;
+    left: 0;
+}
+.sidebar h2 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 20px;
+    text-align:justify;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+    
+     padding: 10px;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Section Titles */
+
+.nav{
+    width:125%;
+    height:100px;
+    background-color: red;
+    color:white;
+    padding:37px;
+    font-size: 1.5em;
+    margin-top: -30px;
+    margin-left:-154px;
+}
+h5{
+    text-align: right;
+    margin-top: -30px;
+}
+/* Card Layout */
+.blood-group-cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-left:170px;
+   margin-top: 40px;
+    padding-left:70px;
+}
+
+.summary-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top:110px;
+    margin-left:240px;
+}
+
+/* Blood Group Cards */
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height:120px;
+    text-align: center;
+}
+
+/* Summary Cards */
+.summary {
+    background-color: red;
+    color: #fff;
+}
+
+/* Blood Group Specific Colors */
+#A-positive { background-color: #f8e8e8; }
+#A-negative { background-color: #f4c7c3; }
+#B-positive { background-color: #f9e2c7; }
+#B-negative { background-color: #f7c7af; }
+#AB-positive { background-color: #c7e4f4; }
+#AB-negative { background-color: #a8d5e2; }
+#O-positive { background-color: #d1e7dd; }
+#O-negative { background-color: #a3d0bc; }
+
+.card h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.summary h3 {
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.summary p {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color:white;
+}

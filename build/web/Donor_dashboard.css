@@ -1,0 +1,540 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+    position: relative;            /* Container for slideshow */
+    height: 100vh;
+}
+
+/* ----- image slide show ----- */
+/* General settings for the slideshow container */
+.slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place behind the main content */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: slideShow 15s infinite;
+}
+
+/* Ensure main content is above the slideshow */
+.main-content {
+    position: relative;
+    z-index: 1; /* Ensure main content is visible above the slideshow */
+}
+
+/* Specific timing for each slide */
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+.slide:nth-child(2) {
+    animation-delay: 5s;
+}
+.slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+/* Keyframes for slideshow animation */
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+    }
+    10%, 30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+}
+
+
+/* Navbar styles */
+.nav {
+    top: 0;
+    display: flex; 
+    justify-content: space-between; /* Space out logo and links */
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.5); /* Lighter background */
+    backdrop-filter: blur(5px);
+}
+
+.nav .logo {
+    color: #8B0000;
+    font-size: 28px; /* Larger logo */
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px; /* Add gap between links */
+    list-style: none;
+}
+
+.nav ul li a {
+    color: #8B0000;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    background-color: rgba(139, 0, 0, 0.8); /* Add hover effect */
+    color: white;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 88vh;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.text-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.text-content h2 {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+   /* Animation for sliding in from the top */
+   @keyframes slideInTop 
+   {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* General styles for the card section */
+.card-section {
+    background-color: #f9f9f9;
+    text-align: center;
+    background-image: url("/img/hi_donor.jpg");
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Title styles */
+.all-cards .section-title h2 {
+    font-size: 3em;
+    margin-bottom: 65px;
+    color: white;
+}
+/* Card Section */
+  
+.all-cards{
+    margin:0;
+    padding: 40px 20px;
+    width: 100%;
+    height: 87vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+  
+  /* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Card Styling */
+.card {
+    position: relative;
+    width: 300px;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+.card:hover {
+    transform: translateY(-10px);
+  }
+  
+.card .image-box {
+    position: relative;
+  }
+  
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+.card-title {
+    padding: 15px;
+    background-color: #ffffff;
+  }
+  
+.card-title h3 {
+    font-size: 1.3em;
+    color: #141111;
+    margin: 0;
+  }
+  
+.card-container .card-link {
+        display: block;
+        text-decoration: none;
+        background: transparent;
+  }
+  
+  .card-container .card-link:hover{
+    transform: translateY(-10px);
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card-container {
+      justify-content: center;
+    }
+    .card {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 90%;
+    }
+  }
+
+.why-donate-blood{
+    top: 200vh;
+    width: 100%;
+    margin-top: 100vh;
+}
+
+.div-img
+{
+    display: inline-flex;
+    padding: 40px;
+}
+
+.div-img img{
+    height: 30rem;
+    width: 35rem;
+    padding-left: 5rem;
+}
+
+.div-img .all-divs .reason{
+    padding: 10px;
+    text-align: justify;
+    width: 30rem;
+    justify-content:unset;
+}
+
+
+/*  --- Why Donate Blood ----- */
+
+/* Why Donate Blood Section */
+.why-donate-blood {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .why-donate-blood h1 {
+    font-size: 36px;
+    color: #a52a2a;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  }
+  
+  /* Div Container holding both reasons and image */
+  .div-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+  }
+  
+  /* All reasons section */
+  .all-divs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Reason Box */
+  .reason {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+  }
+  
+  .reason:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Icon Styling */
+  .reason i {
+    font-size: 36px;
+    color: #a52a2a;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  }
+  
+  /* Reason Title */
+  .reason h2 {
+    font-size: 24px;
+    color: #a52a2a;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  /* Reason Description */
+  .reason p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+  }
+/* Image section */
+.image {
+    margin: 0;
+    padding-right: 20px;
+    width: 100%;  
+  height: 600px;
+  overflow: hidden;  
+  position: relative; 
+    flex: 1;
+    max-width: 100%; /* Ensure the image does not overflow its container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .image img {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; 
+  border-radius: 8px;
+   border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .div-img {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .image {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+  }
+  
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-wrapper {
+        padding: 20px 5%;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .text-content {
+        font-size: 1.8rem;
+    }
+}
+
+/* Basic Footer Styling */
+.footer {
+
+  background-color: #1d1d1d;
+  color: #ffffff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid transparent;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 60%;
+}
+
+.footer-container {
+  display: flex;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  justify-items: center;
+}
+
+.footer-section {
+  flex: 1;
+  margin-left: 3rem;
+  min-width: 200px;
+  padding: 15px;
+}
+
+.footer-section h3 {
+  color: #bf0202;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #ff5e5e;
+}
+
+/* Social Media Icons */
+.social-icons a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ff5e5e;
+}
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  margin-bottom: 0;
+  }
+
+.footer-align{
+  justify-items: center;
+  margin-right: 2rem;
+}
+.footer-bottom button {
+  object-position: center;
+  background-color: #b30606;
+  border: none;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.footer-bottom button:hover {
+  background-color: #ff7878;
+}
+
+.footer-bottom .legal a {
+  color: #ffffff;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.footer-bottom .legal a:hover {
+  color: #ff5e5e;
+}

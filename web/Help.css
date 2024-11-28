@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container for centralizing content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.help-header {
+    background: linear-gradient(45deg, #fc431a, #b30000);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.help-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.help-header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+/* Main Content */
+.help-content {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Section Card Styling */
+.section-card {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.section-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.section-card h2 {
+    font-size: 2rem;
+    color: #b30000;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid #b30000;
+    padding-bottom: 10px;
+}
+
+.section-card p, .section-card ul, .section-card ol {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.section-card ol, .section-card ul {
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+.section-card ul li, .section-card ol li {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.section-card i {
+    font-size: 2rem;
+    color: #b30000;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+/* Icons and Lists with Hover Effects */
+.section-card i:hover {
+    color: #f4a261;
+}
+
+/* Myth-Fact Cards */
+.myth-fact {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #b30000;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.myth-fact:hover {
+    background-color: #f4f4f4;
+    transform: translateX(5px);
+}
+
+.myth-fact h3 {
+    font-size: 1.2rem;
+    color: #b30000;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.myth-fact p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact a {
+    color: #b30000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+    color: #f4a261;
+}
+
+/* Hover Effect for Section Cards */
+.section-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .help-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .myth-fact h3 {
+        font-size: 1.1rem;
+    }
+}
+
+

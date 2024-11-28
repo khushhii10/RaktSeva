@@ -1,0 +1,152 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #b30000;
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Main Container */
+.drives-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Slideshow Container */
+.drive-slideshow {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+/* Drive Card */
+.drive {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+}
+
+.drive:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Container */
+.drive-images {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.drive-images img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+/* Show the first image */
+.drive-images img:first-child {
+    display: block;
+}
+
+/* Slideshow Buttons */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.slide-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Drive Info */
+.drive-info {
+    padding: 30px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 1.2rem;
+    text-align: left;
+    border-top: 2px solid #f1f1f1;
+}
+
+.drive-info p {
+    margin: 15px 0;
+}
+
+.drive-info p strong {
+    font-weight: 700;
+    color: #b30000;
+}
+
+/* Hover Effect for Information */
+.drive-info p span {
+    transition: color 0.3s ease;
+}
+
+.drive-info p span:hover {
+    color: #b30000;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .drive {
+        max-width: 100%;
+    }
+
+    .drive-info {
+        padding: 20px;
+    }
+}

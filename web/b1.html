@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Donation - Rakt Seva</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #007bff;
+            --danger: #dc3545;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        body {
+            font-family: var(--font-family);
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #F3F4F4;
+            margin: 0;
+            padding: 0;
+        }
+        .text-center {
+            text-align: center !important;
+        }
+        .donationTypeInfoWindow {
+            padding: 30px;
+            border: 1px solid rgba(0,0,0,.1);
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 8px;
+        }
+        .typeHeading h1 {
+            font-size: 2em;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav-tabs li {
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: var(--primary);
+            border: 1px solid transparent;
+            border-radius: 4px 4px 0 0;
+        }
+        .nav-tabs .active {
+            border-color: #ddd #ddd #fff;
+            font-weight: bold;
+        }
+        .tabInfo {
+            display: none;
+            margin-top: 20px;
+        }
+        .tabInfo.active {
+            display: flex;
+        }
+        .tabInfo div {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+    </style>
+    <script>
+        function openInfo(event, tabId) {
+            // Remove active class from all tabs and hide all content
+            document.querySelectorAll('.nav-tabs .infoLink').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tabInfo').forEach(content => content.classList.remove('active'));
+
+            // Add active class to clicked tab and display corresponding content
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="col-md-12 donationTypeInfoWindow text-center">
+        <!-- Header -->
+        <header class="typeHeading">
+            <h1>Types of Donation</h1>
+        </header>
+
+        <!-- Content -->
+        <div class="content">
+            <p>The average human body contains about five liters of blood, which is made of several cellular
+                and non-cellular components such as <strong>Red blood cell</strong>, <strong>Platelet</strong>, and <strong>Plasma</strong>.
+            </p>
+            <p>Each type of component has its unique properties and can be used for different indications. The donated blood is separated into these components by the blood centre, and one donated unit can save up to four lives depending on the number of components separated from your blood.</p>
+        </div>
+        
+        
+
+        <!-- Tab Contents -->
+        <div class="row tabInfo active" id="wholeBlood">
+            <div class="col-md-4">
+                <h3>What is it?</h3>
+                <p>Blood collected straight from the donor into a blood bag and mixed with an anticoagulant is called whole blood. This collected whole blood is then centrifuged and red cell, platelets, and plasma are separated.</p>
+                <h3>Who can donate?</h3>
+                <p>You need to be 18-65 years old, weigh 45kg or more, and be fit and healthy.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Used For?</h3>
+                <p>Correction of severe anemia, blood loss in childbirth, surgery, or trauma.</p>
+                <h3>Lasts For?</h3>
+                <p>Red cells can be stored for 42 days at 2-6 degrees Celsius.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>How long does it take to donate?</h3>
+                <p>15-30 minutes including pre-donation check-up.</p>
+                <h3>How often can I donate?</h3>
+                <p>Men can donate every 90 days, and women every 120 days.</p>
+            </div>
+        </div>
+
+        <div class="row tabInfo" id="plasma">
+            <div class="col-md-4">
+                <h3>What is it?</h3>
+                <p>The straw-colored liquid in which blood cells float, containing special nutrients to create various medical products. Plasma can be obtained from collected blood or through apheresis.</p>
+                <h3>Who can donate?</h3>
+                <p>Similar to red blood cell donation, with a minimum weight of 50 kg for apheresis.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Used For?</h3>
+                <p>Treatment of coagulation factor deficiencies and trauma-related blood loss.</p>
+                <h3>Lasts For?</h3>
+                <p>Plasma can be stored for up to one year if frozen below -30 degrees.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>How long does it take?</h3>
+                <p>15-30 minutes including pre-donation check-up.</p>
+                <h3>How often can I donate?</h3>
+                <p>Similar to red cell donation.</p>
+            </div>
+        </div>
+
+        <div class="row tabInfo" id="platelet">
+            <div class="col-md-4">
+                <h3>What is it?</h3>
+                <p>Cellular elements that help with clotting. Vital for patients with low platelet counts, such as cancer patients.</p>
+                <h3>Who can donate?</h3>
+                <p>Similar to whole blood, with additional screening for apheresis donation.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Used For?</h3>
+                <p>Conditions with low platelet count such as cancer, blood diseases, and trauma.</p>
+                <h3>Lasts For?</h3>
+                <p>Stored for 5 days at 20-24 degrees Celsius.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>How does it work?</h3>
+                <p>We collect your blood, keep platelets, and return the rest via apheresis donation.</p>
+                <h3>How often can I donate?</h3>
+                <p>Every 2 weeks, up to 24 times per year.</p>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>

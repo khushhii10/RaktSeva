@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receiver Dashboard | RaktSeva</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background: url('your-background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .dashboard-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .dashboard-container h1 {
+            color: #e74c3c;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons for Request Made and Request History */
+        .dashboard-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .dashboard-button:hover {
+            background: linear-gradient(45deg, #c0392b, #a93226);
+            transform: translateY(-3px);
+        }
+
+        /* Request Form Container */
+        .form-container, .history-container {
+            display: none;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+            animation: slideDown 0.5s ease;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Request History Table */
+        .history-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .history-container th,
+        .history-container td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .history-container th {
+            background: #f7f7f7;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+    <h1>Receiver Dashboard</h1>
+    <a class="dashboard-button" onclick="showForm()">Request Made</a>
+    <a class="dashboard-button" onclick="showHistory()">Request History</a>
+</div>
+
+<!-- Request Form Container -->
+<div class="form-container" id="requestForm">
+    <h2>Make a New Request</h2>
+    <form action="/submit-request" method="POST">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bloodType">Blood Type</label>
+            <select id="bloodType" name="bloodType" required>
+                <option value="" disabled selected>Select Blood Type</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
+        </div>
+
+        <div class="form-group">
+            <label for="reason">Reason for Request</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Submit Request</button>
+    </form>
+</div>
+
+<!-- Request History Container -->
+<div class="history-container" id="requestHistory">
+    <h2>Request History</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Blood Type</th>
+                <th>Location</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example history data, replace with dynamic data from the server -->
+            <tr>
+                <td>2024-11-10</td>
+                <td>O+</td>
+                <td>Central City</td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>2024-11-05</td>
+                <td>A-</td>
+                <td>Downtown</td>
+                <td>Fulfilled</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // JavaScript to toggle form and history display
+    function showForm() {
+        document.getElementById('requestForm').style.display = 'block';
+        document.getElementById('requestHistory').style.display = 'none';
+    }
+
+    function showHistory() {
+        document.getElementById('requestForm').style.display = 'none';
+        document.getElementById('requestHistory').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

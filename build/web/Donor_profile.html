@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Donor_profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Donor Profile</title>
+</head>
+
+<body>
+   <div class="nav">
+        <div class="logo">
+            <h1><b>R</b>aktSeva</h1>
+        </div>
+        <ul>
+             <li>
+                <a href="#"><b>Home</b></a>
+            </li>
+            <li>
+                <a href="#"><b>Profile</b></a>
+            </li>
+            <li>
+                <a href="#"><b>FAQ</b></a>
+            </li>
+            <li>
+                <a href="#"><b>Help</b></a>
+            </li>
+            <li>
+                <a href="#"><b>Contact Us</b></a>
+            </li>
+            <li>
+                <a href="#"><b>About Us</b></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-container">
+        <!-- ==== Side nav bar start -->
+        <div class="sidebar">
+            <div class="aside">
+                <div class="profile">
+                    <h2 id="donor_name">Sneha Dev</h2>
+                </div>
+                <ul class="side-nav">
+                    <li><a href="#personal-info">Personal Info</a></li>
+                    <li><a href="#medical-history">Medical History</a></li>
+                    <li><a href="#donation-history">Donation History</a></li>
+                    <li><a href="#scheduled_appointments">Appointments</a></li>
+                    <li><a href="#contact_info">Contact Info</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="profile-info">
+        <div class="profile-card">
+            <div class="profile-header">
+                <h2>Personal Info</h2>
+            </div>
+            <div class="info-box">
+                <div class="info-item">
+                    <span class="info-label">Name:</span>
+                    <span class="info-value">John Doe</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Gender:</span>
+                    <span class="info-value">Male</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">DOB:</span>
+                    <span class="info-value">01/01/1990</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Age:</span>
+                    <span class="info-value">34</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Blood Type:</span>
+                    <span class="info-value">O+</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Address:</span>
+                    <span class="info-value">123 Main St, City</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">City:</span>
+                    <span class="info-value">New York</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Country:</span>
+                    <span class="info-value">USA</span>
+                </div>
+            </div>
+        </section>
+
+          <!-- Medical History Card -->
+          <div class="profile-card">
+            <div class="profile-header">
+                <h2>Medical History</h2>
+            </div>
+            <div class="medical-history-info">
+                <p><strong>Chronic Conditions:</strong> <span id="display-chronic-conditions">Diabetes, Hypertension</span></p>
+                <p><strong>Recent Illnesses:</strong> <span id="display-recent-illnesses">None</span></p>
+                <p><strong>Medications:</strong> <span id="display-medications">Aspirin, Metformin</span></p>
+                <p><strong>Vaccinations:</strong> <span id="display-vaccinations">Flu vaccine (2024)</span></p>
+                <p><strong>Pregnancy Status:</strong> <span id="display-pregnancy-status">No</span></p>
+                <p><strong>Blood Disorders:</strong> <span id="display-blood-disorders">None</span></p>
+                <p><strong>Travel History:</strong> <span id="display-travel-history">No recent travel to high-risk areas</span></p>
+            </div>
+        </div>
+
+        <!-- Donation History Card -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <h2>Donation History</h2>
+            </div>
+            <div class="profile-details">
+                <div class="donation-history">
+                    <table class="donation-history-table">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Date</th>
+                                <th>Location</th>
+                                <th>Blood Group</th>
+                                <th>Units Donated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>{Donation_Date_1}</td>
+                                <td>{Donation_Location_1}</td>
+                                <td>{Blood_Group_1}</td>
+                                <td>{Units_Donated_1}</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>{Donation_Date_2}</td>
+                                <td>{Donation_Location_2}</td>
+                                <td>{Blood_Group_2}</td>
+                                <td>{Units_Donated_2}</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>{Donation_Date_3}</td>
+                                <td>{Donation_Location_3}</td>
+                                <td>{Blood_Group_3}</td>
+                                <td>{Units_Donated_3}</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Appointments Card -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <h2>Appointments</h2>
+            </div>
+            <div class="appointments">
+            <table class="appointments-table">
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                        <th>City</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2024-11-15</td>
+                        <td>10:00 AM</td>
+                        <td>Blood Donation Center A</td>
+                        <td>New York</td>
+                        <td>Confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2024-12-01</td>
+                        <td>02:00 PM</td>
+                        <td>Blood Donation Center B</td>
+                        <td>Los Angeles</td>
+                        <td>Pending</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+        <!-- Contact Info Card -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <h2>Contact Information</h2>
+            </div>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <i class="icon fa fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+1 (123) 456-7890</p>
+                </div>
+                <div class="contact-card">
+                    <i class="icon fa fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>donor@example.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="icon fa fa-map-marker"></i>
+                    <h3>Address</h3>
+                    <p>123 Donation St, BloodCity, BL 45678</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</body>
+
+</html>

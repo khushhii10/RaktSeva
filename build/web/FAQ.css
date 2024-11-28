@@ -1,0 +1,115 @@
+/* faq.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #b30000;
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* FAQ Container */
+.faq-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* FAQ Item */
+.faq-item {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* FAQ Question */
+.faq-question {
+    padding: 15px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #e0e0e0;
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+/* FAQ Icon */
+.icon {
+    font-size: 1.5rem;
+    color: #b30000;
+    transition: transform 0.3s ease;
+}
+
+/* Stylish Answer Box */
+.faq-answer {
+    padding: 20px;
+    background: linear-gradient(135deg, #f9f9f9, #f1f1f1);
+    border-left: 5px solid #b30000;
+    color: #555;
+    display: none;  /* Initially hidden */
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.faq-answer p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);  /* Answer slides in smoothly */
+}
+
+.faq-item.open .icon {
+    transform: rotate(45deg); /* Change icon on open */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 10px;
+    }
+
+    .faq-item {
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
