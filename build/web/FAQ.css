@@ -98,18 +98,101 @@ header h1 {
 .faq-item.open .icon {
     transform: rotate(45deg); /* Change icon on open */
 }
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .faq-container {
-        padding: 10px;
-    }
-
-    .faq-item {
-        margin-bottom: 15px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
+.footer {
+  
+  background-color: #1d1d1d;
+  color: #ffffff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid transparent;
+ border-top-left-radius: 50%;
+  border-top-right-radius: 60%;
 }
+
+.footer-container {
+  display: flex;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  justify-items: center;
+}
+
+.footer-section {
+  flex: 1;
+  margin-left: 3rem;
+  min-width: 200px;
+  padding: 15px;
+}
+
+.footer-section h3 {
+  color: #bf0202;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #ff5e5e;
+}
+
+/* Social Media Icons */
+.social-icons a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ff5e5e;
+}
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  margin-bottom: 0;
+  }
+
+.footer-align{
+  justify-items: center;
+  margin-right: 2rem;
+}
+.footer-bottom button {
+  object-position: center;
+  background-color: #b30606;
+  border: none;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.footer-bottom button:hover {
+  background-color: #ff7878;
+}
+
+.footer-bottom .legal a {
+  color: #ffffff;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.footer-bottom .legal a:hover {
+  color: #ff5e5e;
+}
+

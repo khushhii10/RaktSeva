@@ -18,13 +18,14 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
         String s8=request.getParameter("u8");
             String s9=request.getParameter("u9");
              String s10=request.getParameter("u10");
+             String s12=request.getParameter("u11");
             try
             {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/raktseva?useSSL=false","root","root");
             //Connection con=DriverManager.getConnection("jdbc:mysql:///RaktSeva","root","root");
             Statement st=con.createStatement();
-            String s11="insert into requestmade values('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','"+s6+"','"+s7+"','"+s8+"','"+s9+"','"+s10+"')";
+            String s11="insert into requestmade values('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','"+s6+"','"+s7+"','"+s8+"','"+s9+"','"+s10+"','"+s12+"')";
             st.executeUpdate(s11);
             response.sendRedirect("Request_made.html");
             con.close();

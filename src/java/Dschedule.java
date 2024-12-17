@@ -17,14 +17,14 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
         String s7=request.getParameter("u7");
         String s8=request.getParameter("u8");
         String s9=request.getParameter("u9");
-             
+        String s10=request.getParameter("u10");     
             try
             {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/raktseva?useSSL=false","root","root");
             //Connection con=DriverManager.getConnection("jdbc:mysql:///RaktSeva","root","root");
             Statement st=con.createStatement();
-            String s11="insert into dschedule values('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','"+s6+"','"+s7+"','"+s8+"','"+s9+"')";
+            String s11="insert into dschedule values('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','"+s6+"','"+s7+"','"+s8+"','"+s9+"','"+s10+"')";
             st.executeUpdate(s11);
             response.sendRedirect("Dschedule.html");
             con.close();

@@ -17,16 +17,8 @@
         <servlet-class>AdminLogin</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>RecipientDetails</servlet-name>
-        <servlet-class>RecipientDetails</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>Request_made</servlet-name>
         <servlet-class>Request_made</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>DonorDetails</servlet-name>
-        <servlet-class>DonorDetails</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Dschedule</servlet-name>
@@ -35,6 +27,10 @@
     <servlet>
         <servlet-name>DonorAdminDetail</servlet-name>
         <servlet-class>DonorAdminDetail</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Requests</servlet-name>
+        <servlet-class>Requests</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Registration</servlet-name>
@@ -61,16 +57,8 @@
         <url-pattern>/AdminLogin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>RecipientDetails</servlet-name>
-        <url-pattern>/RecipientDetails</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>Request_made</servlet-name>
         <url-pattern>/Request_made</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DonorDetails</servlet-name>
-        <url-pattern>/DonorDetails</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Dschedule</servlet-name>
@@ -79,5 +67,9 @@
     <servlet-mapping>
         <servlet-name>DonorAdminDetail</servlet-name>
         <url-pattern>/DonorAdminDetail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Requests</servlet-name>
+        <url-pattern>/Requests</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -4,156 +4,11 @@
     <meta charset="UTF-8">
     <title>RaktSeva</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        .bodytheme {
-            background-color:white;
-            height: 100vh;
-            overflow-y: auto;
-        }
-        .home-gif {
-            background-image: url(./images/ggg.gif);
-            background-size: 82%;
-            background-repeat: no-repeat;
-            height: 100vh;
-            position: relative;
-            z-index: 1;
-        }
-        .home-content {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: white;
-            z-index: 2;
-        }
-        .menu-container {
-            width: 270px;
-            background-color: black;
-            opacity:0.8;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            z-index: 3;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        
-        .menu-container th {
-            width: 100%;
-            font-family:Times New Roman;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            padding: 10px;
-            text-align: left;
-            position: relative;
-            transition: background-color 0.3s ease;
-        }
-        .menu-container th:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        .menu-container th a {
-            color: white;
-            text-decoration: none;
-            display: block;
-        }
-        .menu-container .submenu {
-            display: none;
-            background-color: rgba(0, 0, 0, 0.5);
-            width: 100%;
-            padding: 5px;
-            position: relative;
-            left: 0;
-        }
-        .menu-container .submenu a {
-            display: block;
-            color: white;
-            padding: 5px 10px;
-            text-decoration: none;
-        }
-        .menu-container th:hover .submenu {
-            display: block;
-        }
-        .content-sections {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin: 20px 20px;
-            
-            padding-right: 280px; /* Offset for the menu bar */
-        }
-        .about-us, .contact-us {
-            width: 48%;
-            box-sizing: border-box;
-            padding: 30px 20px;
-            background-color: rgba(85, 84, 83, 0.3);
-            font-size: 20px;
-            line-height: 1.6;
-            height: 530px; /* Fixed height for equal sizing */
-        }
-        .about-us h2, .contact-us h2 {
-            font-size: 28px;
-            font-weight: bold;
-            color: black;
-        }
-        .contact-us {
-            background-color: rgba(85, 84, 83, 0.3);
-            position: relative;
-        }
-        .contact-us::before {
-            
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 40px;
-            height: 30px;
-        }
-        .contact-us form {
-            margin-top: 10px;
-        }
-        .contact-us label {
-            font-size: 18px;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .contact-us input[type="text"],
-        .contact-us input[type="email"],
-        .contact-us textarea {
-            width: 90%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        .contact-us input[type="submit"] {
-            font-size: 18px;
-            color: white;
-            background-color: #1d1c1c;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .contact-us input[type="submit"]:hover {
-            background-color: #555;
-        }
-        #map-container {
-            width: 82%;
-            height: 70vh;
-            margin-top: 0px;
-            clear: both;
-        }
-
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Home.css" />
 </head>
 <body>
     <div class="bodytheme">
@@ -164,7 +19,8 @@
         </div>
         <div class="menu-container">
             <table>
-                <tr><th><a href="Home.html">HOME</a></th></tr>
+                <tr><th><a href="About.html">About Us</a></th></tr>
+                <tr><th><a href="Contact.html">Contact Us</a></th></tr>
                 <tr><th>LOOKING FOR BLOOD
                     <div class="submenu">
                         <a href="RLogin.html">LOGIN AS RECEIVER</a>
@@ -175,7 +31,7 @@
                     <div class="submenu">
                         <a href="DonorLogin.html">LOGIN AS DONOR</a>
                         <a href="">BLOOD DONATION CAMPS</a>
-                        <a href="">ABOUT BLOOD DONATION</a>    
+                        <a href="AboutDonation.html">ABOUT BLOOD DONATION</a>    
                     </div>
                 </th></tr>
                 
@@ -215,16 +71,17 @@
         </div>
        
     </div>
-  <!--  <footer class="footer">
+     
+     <footer class="footer">
       <div class="footer-container">
         <!-- Quick Links -->
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQs</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="FAQ.html">FAQs</a></li>
             <li><a href="#">Become a Volunteer</a></li>
-            <li><a href="#">Become a Donor</a></li>
+            <li><a href="DonorRegistration.html">Become a Donor</a></li>
            
           </ul>
         </div>
@@ -260,6 +117,6 @@
       </div>
     </div>
     </footer>
-    -->
+  
 </body>
 </html>
